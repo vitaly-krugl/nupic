@@ -99,7 +99,8 @@ before_install:
   - which virtualenv
   - virtualenv --version
   - "echo ZZZ PYTHONPATH ${PYTHONPATH}"
-  - pip install --upgrade --ignore-installed virtualenv
+  - pip install --upgrade --ignore-installed virtualenv --user
+  - "find ~ -name virtualenv 2>/dev/null"
   - which virtualenv
   - virtualenv --version
   - virtualenv --no-site-packages venv
